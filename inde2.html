@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="so1">
+    <input type="text" id="so2">
+    <br>
+    <button  onclick="cong()">Cộng</button>
+    <button onclick="tru()">trừ</button>
+    <button  onclick="nhan()">nhan</button>
+    <button onclick="chia()">chia</button>
+    <br>
+    <p>Result:</p>
+    <br>
+    <input id="result"></input>
+<script>
+    function cong() {
+        let dautien = parseFloat(document.getElementById ('so1').value);
+        let sothu2 = parseFloat(document.getElementById('so2').value);
+        let x;
+        x = (dautien)+(sothu2);
+        document.getElementById('result').value=x;
+    }
+    function tru(){
+        let dautien = parseFloat(document.getElementById ('so1').value);
+        let sothu2 = parseFloat(document.getElementById('so2').value);
+        let x;
+        x = dautien-sothu2;
+        document.getElementById('result').value=x;      
+    }
+    function nhan(){
+        let dautien = parseFloat(document.getElementById ('so1').value);
+        let sothu2 = parseFloat(document.getElementById('so2').value);
+        let x;
+        x = dautien*sothu2;
+        document.getElementById('result').value=x;      
+    }
+    function chia(){
+        let dautien = parseFloat(document.getElementById ('so1').value);
+        let sothu2 = parseFloat(document.getElementById('so2').value);
+        let x;
+        x = dautien/sothu2;
+        document.getElementById('result').value=x;      
+    }
+</script>
+</body>
+</html>

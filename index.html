@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js"></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Amuont</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>    
+            <td><input type="text" id="dauvao"></td>
+            <td>
+                <select name="Quôc gia" id="select1">
+                <option value="a">USD</option>
+                <option value="b">VND</option>
+            </select></td>  
+            <td>
+                <select id="select2">
+                <option value="a">USD</option>  
+                <option value="b">VND</option>    
+            </select></td>
+            <td><button onclick="hai()">Convert</button></td>   
+        </tr>
+    </table>
+<p id="result"></p>
+</body>
+</html>
