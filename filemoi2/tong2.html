@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="a">
+    <input type="text" id="c">
+    <button onclick="tong()">Tổng</button>
+    <p id="pri"></p>
+    <p id="pri1"></p>
+    <script>
+        function tong(){
+            var a = parseInt(document.getElementById("a").value);
+            var c = parseInt(document.getElementById("c").value);
+            var b=0;
+            if(a<c){
+                for(let i=a;i<=c;i++){
+                    if(i%2==0){
+                        b=b+i;
+                    }
+                    document.getElementById("pri").innerHTML=b;
+                }
+            }
+            else{
+                for(let i=c;i<=a;i++){
+                    if(i%2==0){
+                        b=b+i;
+                    }
+                }
+                document.getElementById("pri").innerHTML=b;
+            }
+        }
+    </script>
+</body>
+</html>

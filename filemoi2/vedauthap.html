@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="bm()">BẤM</button>
+    <button onclick="bm2()">BẤM</button>
+    <button onclick="bm3()">BẤM</button>
+    <button onclick="bm4()">BẤM</button>
+    <button onclick="bm5()">BẤM</button>
+    <script>
+        function bm(){
+            let x=[];
+            for(let i=0;i<=5;++i){
+                x.push('*');
+                document.write(x.join('')+"<br>");
+            }  
+        }
+        function bm2(){
+            let rows = 5; // Số hàng của tam giác vuông
+            let triangle = '';
+            for (let i = 1; i <= rows; i++) {
+                for (let j = 1; j <= i; j++) {
+                    triangle += '*';
+                }
+                triangle += '<br>';
+            }
+            document.write(triangle);
+        }
+        function bm3(){
+            let rows = 5; // Số hàng của tam giác vuông
+            let triangle = '';
+            for (let i = rows; i > 0;--i) {
+                for (let j = 1; j <= i; j++) {
+                    triangle += '*';
+                }
+                triangle += '<br>';
+            }
+            document.write(triangle);
+        }
+        function bm4(){
+            let rows = 5; // Số hàng của tam giác vuông
+            let triangle = '';
+            for (let i = 1; i <= rows; i++) {
+                for (let j = 0; j<rows-i; j++) {
+                    triangle += '&nbsp&nbsp';
+                }
+                for(let k=0;k<i;k++){
+                        triangle+="*";
+                }
+                triangle += '<br>';
+            }
+            document.write(triangle);
+        }
+        function bm5(){
+            let rows = 5; // Số hàng của tam giác vuông
+            let triangle = '';
+            for (let i = 1; i <= rows; i++) {
+                for(let k=0;k<i;k++){
+                        triangle+='&nbsp&nbsp';
+                }
+                for (let j = i; j<rows;j++) {
+                    triangle += "*";
+                }
+                triangle += '<br>';
+            }
+            document.write(triangle);
+        }
+    </script>
+</body>
+</html>

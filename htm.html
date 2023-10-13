@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+   
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Căn bậc 2</title>
+</head>
+<body>
+    <label for="number">Nhập một số: </label>
+    <input type="number" id="number">
+    <button onclick="calculateSquareRoot()">Tính căn bậc 2</button>
+    <p id="result"></p>
+    <script>
+    function calculateSquareRoot() {
+        // Lấy giá trị nhập từ input
+        let numberInput = document.getElementById("number");
+        let inputValue = parseFloat(numberInput.value);
+        let a=1;
+        let b=30;
+        let x=0;
+        let dem=0;
+        let tog=0;
+        let cb=[];
+        for(let i =a;i<=b;i++){
+            if(Math.sqrt(i)%1==0){
+                document.write(i+"<br>")
+                x=x+i;
+            }
+        }
+        document.write(x+'<br>'+'<br>');
+        for(let i=a;i<=30;i++){
+            if(Math.sqrt(i)%1==0){
+                if(i%5==0){
+                    document.write(i+'<br>'+'<br>');
+                    break;
+                }
+            }
+        }
+        for(let i=0;dem<=30;i++){
+            if(i%7==0){
+                tog=tog+i;
+                dem++;
+            }
+        }
+        document.write(tog+'<br>'+'<br>');
+        for(let i=1;i<=100;i++){
+            if (i % 3 === 0 && i % 5 === 0) {
+                document.write("AAA" + "<br>");
+            } else if (i % 3 === 0) {
+                document.write("Fizz" + "<br>");
+            } else if (i % 5 === 0) {
+                document.write("Buzz" + "<br>");
+            } else {
+                document.write(i + "<br>");
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tìm số nguyên tố</title>
+</head>
+<body>
+  <h1>Tìm số nguyên tố a và b</h1>
+  <input type="text" id="a">
+  <input type="text" id="c">
+  <button onclick="findPrimes()">Tìm số nguyên tố</button>
+  <p>Các số nguyên tố trong khoảng từ a, b:</p>
+  <p id="primeList"></p>
+  <p id="primeList1"></p>
+
+  <script>
+    function isPrime(num) {
+      if (num <= 1) {
+        return false;
+      }
+      for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+          return false;
+        }
+      }
+      return true;
+    }
+
+    function findPrimes() {
+      var a = parseInt(document.getElementById("a").value);
+      var c = parseInt(document.getElementById("c").value);
+      var b=0;
+      var d=0;
+      for (let i = 1; i <= a; i++) {
+        if (isPrime(i)) {
+          b=i;
+          break;
+        }
+      }
+      document.getElementById("primeList").innerHTML=b;
+      for (let i = 1; i <= c; i++) {
+        if (isPrime(i)) {
+          d=i;
+          break;
+        }
+      }
+      document.getElementById("primeList1").innerHTML=d;
+    }
+  </script>
+</body>
+</html>

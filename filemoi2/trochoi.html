@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="an()">Nhấn</button>
+    <script>
+        function an(){
+            let a =+prompt("nhập vào giá trị khoảng a:");
+            let x= Math.floor(Math.random()*a);
+            console.log(x);
+            let b = +prompt("nhập vào số bạn đoán:");
+            let c=1;
+            for(let i=1;c<3;i++){
+                if(x==b){
+                    alert("bạn đoán đúng rồi!");
+                    break;
+                }
+                else{
+                    let b = +prompt("nhập vào số bạn đoán:");
+                }
+                c++;
+                if(c==3){
+                    alert("bạn nhập quá số lần quy định!");
+                }               
+            }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Số nguyên tố</title>
+    <style>
+        #primeNumbers {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" id="inputNumber" placeholder="Nhập số">
+    <button onclick="findPrimes()">Tìm số nguyên tố</button>
+    <p id="primeNumbers"></p>
+    
+    <script>
+        function isPrime(num) {
+            if (num <= 1) {
+                return false;
+            }
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function findPrimes() {
+            const inputNumber = parseInt(document.getElementById("inputNumber").value);
+            if (isNaN(inputNumber) || inputNumber <= 1) {
+                document.getElementById("primeNumbers").textContent = "Vui lòng nhập số nguyên lớn hơn 1.";
+                return;
+            }
+
+            let primeNumbers = [];
+            for (let i = 2; i <= inputNumber; i++) {
+                if (isPrime(i)) {
+                    primeNumbers.push(i);
+                }
+            }
+
+            if (primeNumbers.length === 0) {
+                document.getElementById("primeNumbers").textContent = "Không tìm thấy số nguyên tố trong khoảng này.";
+            } else {
+                document.getElementById("primeNumbers").textContent = "Các số nguyên tố trong khoảng từ 2 đến " + inputNumber + " là: " + primeNumbers.join(", ");
+            }
+        }
+    </script>
+</body>
+</html>

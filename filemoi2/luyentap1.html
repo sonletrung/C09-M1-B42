@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="dem()">Đếm</button>
+    <p id="ra"></p>
+    <p id ="on"></p>
+    <script>
+        function dem(){
+           let x=[];
+           for (let i=1;i<=100;++i){
+            x.push(i);
+            if (i==99){
+                alert("Hoàn thành");
+                break;
+            }
+           }
+           document.getElementById("ra").textContent="Các số 1 đến 99 là: " + x.join(", ");
+        }
+    </script>
+</body>
+</html>
