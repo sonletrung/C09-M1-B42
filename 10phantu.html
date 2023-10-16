@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a =[34,23,,54,7,333,55,44,77,88,55,99];
+        let b =[1,2,3,4]
+        let maxa=a[0];
+        let dem=0;
+        let dem2=0;
+        var dtb = 0;
+        let c=0;
+        for(let i =0;i<a.length;++i){
+            if(a[i]>10){
+                dem++;
+            }
+            else{
+                dem2++;
+            }
+        }
+        document.write("gia tri lon hon 10: "+dem+"<br>");
+        document.write("cac gia tri nho hon 10: "+dem2+"<br>");
+        for(let i=0;i<a.length;++i){
+            dtb=(dtb+a[i]);
+            if(a[i]>maxa){
+                maxa=a[i];
+            }
+        }
+        console.log(dtb)
+        document.write("gia tri lon nhat: "+maxa+"<br>");
+        document.write("gia tri trung binh cong: "+dtb+"<br>");
+        let last = a.length-1;
+        while(c<last){
+            let u =a[c];
+            a[c]=a[last];
+            a[last]=u;
+            c++;
+            last--;
+        }
+        document.write(a);
+    </script>
+    
+</body>
+</html>
